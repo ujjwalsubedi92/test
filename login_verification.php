@@ -6,7 +6,8 @@
 	
 	if($username=="admin" && $password=="pass")
 	{
-		$_SESSION['loggedin'] = true;
+		$_SESSION['myusername'] = $username;
+		$_SESSION['mypassword'] = $password;
 		?>
         <script language="javascript">
 			location.replace("images/logo.jpg");

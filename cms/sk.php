@@ -1,7 +1,8 @@
 <html>
 <head>
 <?php
-include("connect.php");
+include("../includes/connect.php");
+include("../includes/sessioncheck.php")
 
 ?>
 
