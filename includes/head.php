@@ -21,4 +21,4 @@ h3{font-family:arial;color:white;}
 !-->
 <a href="report.php"> report &nbsp;&nbsp;&nbsp;&nbsp; </a> 
 <a href="addtoleui.php"> add tole &nbsp;&nbsp;&nbsp;&nbsp;</a> 
-<a href="addpeopleui.php"> add people &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+<a href="addpersonui.php"> add people &nbsp;&nbsp;&nbsp;&nbsp;</a> 
