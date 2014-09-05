@@ -2,6 +2,7 @@
 <head>
 <?php
 include("../includes/connect.php");
+include("../includes/sessioncheck.php")
 
 
 ?>
@@ -53,6 +54,26 @@ input{width:100px;}
 			</tr>
 			<tr>
 				<td>Tole id</td>
+				<?php
+					
+					
+					$sql_tole = "select * from tole order by tolename asc";
+					$res_tole = mysql_query($sql_tole) or die("Error in database: " . mysql_error());
+					while($row_tole = mysql_fetch_array($res_tole))
+						{
+							echo "<td>";
+							echo$row_tole['toleid'];
+							echo "</td>";
+							echo "<td>";
+							echo$row_tole['tolename'];
+							
+							echo "</td>";
+							
+							
+							
+						}
+									
+				?>
 				<td><input type="text" name="issto"></td>
 			</tr>
 			<tr>
