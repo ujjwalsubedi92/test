@@ -1,13 +1,15 @@
 <?php
 ?>
+<!--
 <div style="width:100%;height:190px;background-color:#10103b" >
 <style type="text/css">
 h1{font-family:arial;color:white;}
 h3{font-family:arial;color:white;}
 
 </style>
+
 <div style="width:20%;height:190px;float:left;">
-<img src="images/logo.png">
+<img src="../images/logo.jpg" height="100%" width="100%">
 </div>
 
 <div style="width:75%;height:190px;float:right;">
@@ -16,3 +18,7 @@ h3{font-family:arial;color:white;}
 
 </div>
 </div>
+!-->
+<a href="report.php"> report &nbsp;&nbsp;&nbsp;&nbsp; </a> 
+<a href="addtoleui.php"> add tole &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+<a href="addpeopleui.php"> add people &nbsp;&nbsp;&nbsp;&nbsp;</a> 
