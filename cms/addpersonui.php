@@ -49,11 +49,12 @@ input{width:100px;}
 			</tr>
 			
 			</tr>
-				<td>house no</td>
-				<td><input type="date" name="house"></td>
+				<td>House no</td>
+				<td><input type="text" name="house"></td>
 			</tr>
 			<tr>
-				<td>Tole id</td>
+				<td>Tole</td>
+				<td><select id="tole" name="tole">
 				<?php
 					
 					
@@ -61,20 +62,17 @@ input{width:100px;}
 					$res_tole = mysql_query($sql_tole) or die("Error in database: " . mysql_error());
 					while($row_tole = mysql_fetch_array($res_tole))
 						{
-							echo "<td>";
-							echo$row_tole['toleid'];
-							echo "</td>";
-							echo "<td>";
-							echo$row_tole['tolename'];
+							$id=$row_tole['toleid'];
+							$name=$row_tole['tolename'];
+							echo "<option value='$id'>$name</option>";
 							
-							echo "</td>";
 							
 							
 							
 						}
 									
 				?>
-				<td><input type="text" name="issto"></td>
+				</td>
 			</tr>
 			<tr>
 				<td>phone</td>
