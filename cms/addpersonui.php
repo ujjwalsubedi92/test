@@ -26,8 +26,8 @@ document.getElementById(divId).style.display = 'none';
 <title>
 </title>
 <style type="text/css">
-tr.item td{padding:12px;border:0px;}
-tr.item th{padding:12px;border:0px;}
+tr.item td{padding:12px;border:0px;text-align:center;vertical-align:middle;}
+tr.item th{padding:12px;border:0px;text-align:center;vertical-align:middle;}
 img{cursor:pointer;}
 input{width:100px;}
 </style>
@@ -94,44 +94,166 @@ input{width:100px;}
 		<?php 
 			$a=1;$a2=7;$a3=8;
 		?>
-		<table border="6px" style="background-color:#2868C7;border-radius:12px;margin-left:120px">
-		<tr class="item" style="display:block;">
-			
-			<th style="padding-left:28px;">SN</th>
-			<th style="padding-left:30px;">Item Code</th>
-			<th style="padding-left:40px;">Item Name</th>
 		
-			<th style="padding-left:40px;">Specs</th>
-			<th style="padding-left:44px;font-size:12px;">Quantity Requested</th>
-			<th style="padding-left:30px;font-size:12px;">Quantity Issued</th>
-			<th style="padding-left:39px;">Remarks</th>
-			
-			
-			
-		</tr>
+		
 		
 		<?php
 		$b=1;
 		while($b<=7)
 		{
 		?>
-		<tr class="item" id="item" style="display:block;">
-			<td><input style="width:40px;" type="text" name="sn<?php echo$a?>"></td>
-			<td><input type="text" name="icode<?php echo$a?>"></td>
-			<td><input type="text" name="iname<?php echo$a?>"></td>
-			<td><input type="text" name="specs<?php echo$a?>"></td>
-			<td><input type="text" name="quant<?php echo$a?>"></td>
-			<td><input type="text" name="quantissued<?php echo$a?>"></td>
-			<td><input type="text" name="rem<?php echo$a?>"></td>
-			<?php if($b%7==0)
-			{
-			?>
-			<td><img src="images/add1.png" id="img" onclick="javascript:ShowHide('item7','img')" style="heght:20px;width:20px;"></td>
+		<table border="1px solid black" style="margin: 0 auto;">
+		
+		<tr class="item"  style="background-color: #3399FF;" >
 			
-			<?php
-			}
-			?>
+			<td style="padding-left:10px;">SN</th>
+			<td style="padding-left:10px;">Name</th>
+			<td style="padding-left:10px;">Date of Birth</th>
+		
+			<td style="padding-left:10px;">Age</th>
+			<td style="padding-left:10px;">Mom Name</th>
+			<td style="padding-left:10px;">Dad Name</th>
+			<td style="padding-left:10px;">Relation</th>
+			<td style="padding-left:10px;">Sex</th>
+			<td style="padding-left:10px;">Religion</th>
+			
+			
+			
+			
 		</tr>
+		<tr class="item" id="item" >
+			<td><input  style="width:30px;" type="text" name="sn<?php echo$a?>"></td>
+			<td><input type="text" name="name<?php echo$a?>"></td>
+			<td><input type="text" name="dob<?php echo$a?>"></td>
+			<td><input  style="width:30px;" type="text" name="age<?php echo$a?>"></td>
+			<td><input type="text" name="mom<?php echo$a?>"></td>
+			<td><input type="text" name="dad<?php echo$a?>"></td>
+			<td>
+				<select name="relation<?php echo$a?>">
+					<option value="hama">hama</option>
+					<option value="vata">vata</option>
+					<option value="kala">kala</option>
+					<option value="kaya">kaya</option>
+					<option value="mhyaya">mhyaya</option>
+					<option value="bhou">bhou</option>
+					<option value="chaya">chaya</option>
+					<option value="kija">kija</option>
+					<option value="kijabhau">kijabhau</option>
+					<option value="memegu">memegu</option>
+			
+			</td>
+			<td>
+				<select name="sex<?php echo$a?>">
+					<option value="male">male</option>
+					<option value="female">female</option>
+					<option value="3rd">3rd</option>
+					
+			
+			</td>
+			
+			<td>
+				<select name="religion<?php echo$a?>">
+					<option value="boudha">boudha</option>
+					<option value="hindu">hindu</option>
+					<option value="isai">isai</option>
+					<option value="others">others</option>
+					
+			
+			</td>
+			
+			
+			
+		</tr>
+		</table>
+		<br>
+		<table border="1px solid black" style="margin: 0 auto;">
+		<tr class="item"  style="background-color: #3399FF;" >
+		<td colspan="2">Marital</td>
+		<td colspan="3">Matritwa Born</td>
+		<td colspan="3">Matritwa Alive</td>
+		<td colspan="2">Education</td>
+		<td colspan="3">Foreign</td>
+		<td></td>
+		<td colspan="2">Work</td>
+		</tr>
+		<tr class="item"  style="background-color: #3399FF;" >
+		<td > Status</th>
+		<td >Married to</th>
+		<td> male</td>
+		<td> female</td>
+		<td> 3rd</td>
+		<td> male</td>
+		<td> female</td>
+		<td> 3rd</td>
+		<td> level</td>
+		<td> subject</td>
+		<td> study</td>
+		<td> work</td>
+		<td>Country </td>
+		<td>Reason </td>
+		<td>Ancient </td>
+		<td>Modern </td>
+		
+		
+		
+		</tr>
+		<tr class="item" id="item" >
+		<td>
+				<select name="maritalstatus<?php echo$a?>">
+					<option value="jula">jula</option>
+					<option value="majuni">majuni</option>
+					<option value="widhuwa">widhuwa</option>
+					<option value="widur">widur</option>
+					<option value="parpachuke">parpachuke</option>
+					<option value="other">other</option>
+					
+			
+			</td>
+			
+			<td>
+				<select name="marriedto<?php echo$a?>">
+					<option value="jyapu">jyapu</option>
+					<option value="sesya">sesya</option>
+					<option value="gubhaju">gubhaju</option>
+					<option value="barhey">barhey</option>
+					<option value="uday">uday</option>
+					<option value="sayami">sayami</option>
+					<option value="chetri">chetri</option>
+					<option value="brahmu">brahmu</option>
+					<option value="bidesi">bidesi</option>
+					<option value="others">others
+					</option>
+					
+			
+			</td>
+			<td><input  type="text" style="width:30px;" name="bm<?php echo$a?>"></td>
+			<td><input  type="text" style="width:30px;" name="bf<?php echo$a?>"></td>
+			<td><input  type="text" style="width:30px;" name="b3<?php echo$a?>"></td>
+			<td><input  type="text" style="width:30px;" name="am<?php echo$a?>"></td>
+			<td><input  type="text" style="width:30px;" name="af<?php echo$a?>"></td>
+			<td><input  type="text" style="width:30px;" name="a3<?php echo$a?>"></td>
+			
+		
+		</tr>
+		</table>
+		<br>
+		<table border="1px solid black" style="margin:0 auto;">
+		<tr class="item"  style="background-color: #3399FF;" >
+		<td>Land </td>
+		<td>Skill </td>
+		<td>Disease </td>
+		<td>Blood group </td>
+		<td>Sports </td>
+		<td>sanchar </td>
+		<td>sadhan </td>
+		<td>upobhogya sadhan </td>
+		<td>amal </td>
+		<td>kaifiyat </td>
+		
+		
+		</tr>
+		</table>
+		<hr>
 		<?php 
 		$b=$b+1;$a=$a+1;
 		} ?>
@@ -157,7 +279,7 @@ input{width:100px;}
 		
 		
 		
-		</table>
+		
 		<br>
 	<input type="submit" value="send" style="margin-left:905px;" >	
 	
