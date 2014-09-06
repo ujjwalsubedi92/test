@@ -523,7 +523,7 @@ input{width:100px;}
 		</table>
 		<BR>
 		<table border="1px solid black" style="margin:0 auto;">
-		<tr class="item1"  style="background-color: #3399FF;" >
+		<tr class="item"  style="background-color: #3399FF;" >
 			<td>Sports </td>
 			<td>sanchar </td>
 			<td>sadhan </td>
@@ -736,7 +736,7 @@ input{width:100px;}
 		</table>
 		
 		<table border="1px solid black" style="margin:0 auto;">
-		<tr class="item1"  style="background-color: #3399FF;" >
+		<tr class="item"  style="background-color: #3399FF;" >
 			<td>Kaifiyat </td>
 			
 		</tr>
@@ -766,8 +766,11 @@ input{width:100px;}
 	</table>
 	
 	</form>
-	<a href="#top" name= "done"><img src="../images/checklist-small.png"></a>
+	<a href="#top" name= "done"><img src="../images/checklist-small.png"></a> 
+	
 
-
+<?php
+include("../includes/head.php");
+?>
 </body>
 </html>
