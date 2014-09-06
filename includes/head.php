@@ -18,7 +18,58 @@ h3{font-family:arial;color:white;}
 
 </div>
 </div>
-!-->
+
 <a href="report.php"> report &nbsp;&nbsp;&nbsp;&nbsp; </a> 
 <a href="addtoleui.php"> add tole &nbsp;&nbsp;&nbsp;&nbsp;</a> 
 <a href="addpersonui.php"> add people &nbsp;&nbsp;&nbsp;&nbsp;</a> 
+!-->
+
+<style type="text/css">
+/*Initialize*/
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+}
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #3399FF;
+    padding: 20px;
+    display:inline-block;
+}
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 400px;
+}
+ul#menu li:hover ul.sub-menu {
+    display:block;
+	color:#ff1f11;
+}
+</style>
+
+<ul id="menu">
+    <li>
+        <a href="addtoleui.php">Add Tole</a>
+    </li>
+	<li>
+        <a href="addpersonui.php">Add Person</a>
+    </li>
+    <li><a href="report.php">Report</a>
+
+       
+    </li>
+   
+</ul>

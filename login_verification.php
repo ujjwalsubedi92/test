@@ -10,7 +10,7 @@
 		$_SESSION['mypassword'] = $password;
 		?>
         <script language="javascript">
-			location.replace("images/logo.jpg");
+			location.replace("cms/addtoleui.php");
 		</script>
         <?php
 	}
