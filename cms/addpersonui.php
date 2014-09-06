@@ -119,6 +119,7 @@ input{width:100px;}
 		<tr class="item"  style="background-color: #3399FF;" >
 			
 			<td style="padding-left:10px;">SN</th>
+			<td style="padding-left:10px;">ID</th>
 			<td style="padding-left:10px;">Name</th>
 			<td style="padding-left:10px;">Date of Birth</th>
 		
@@ -135,6 +136,7 @@ input{width:100px;}
 		</tr>
 		<tr class="item" id="item" >
 			<td><input  style="width:30px;" type="text" name="sn<?php echo$a?>"></td>
+			<td><input  style="width:65px;" type="text" name="id<?php echo$a?>"></td>
 			<td><input style="width:150px;" type="text" name="name<?php echo$a?>"></td>
 			<td><input type="text" name="dob<?php echo$a?>"></td>
 			<td><input  style="width:30px;" type="text" name="age<?php echo$a?>"></td>
@@ -223,6 +225,7 @@ input{width:100px;}
 			
 			<td>
 				<select name="marriedto<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="jyapu">jyapu</option>
 					<option value="sesya">sesya</option>
 					<option value="gubhaju">gubhaju</option>
@@ -260,6 +263,7 @@ input{width:100px;}
 		
 			<td>
 				<select name="subject<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="kala">kala</option>
 					<option value="banijya">banijya</option>
 					<option value="bigyan">bigyan</option>
@@ -274,6 +278,7 @@ input{width:100px;}
 			</td>
 			<td>
 				<select name="foreignstudy<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="doctor">doctor</option>
 					<option value="engineer">engineer</option>
 					<option value="ca">ca</option>
@@ -289,6 +294,7 @@ input{width:100px;}
 			
 			<td>
 				<select name="foreignwork<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="doctor">doctor</option>
 					<option value="engineer">engineer</option>
 					<option value="nurse">nurse</option>
@@ -305,6 +311,7 @@ input{width:100px;}
 			
 			<td>
 				<select name="country<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="USA">USA</option>
 					<option value="UK">UK</option>
 					<option value="Australia">Australia</option>
@@ -350,6 +357,7 @@ input{width:100px;}
 		<tr class="item1" id="item" >
 			<td>
 					<select name="reason<?php echo$a?>">
+						<option value=" "> </option>
 						<option value="abumadaya">abumadaya</option>
 						<option value="mamadaya">mamadaya</option>
 						<option value="damdaya">damadaya</option>
@@ -360,6 +368,7 @@ input{width:100px;}
 			</td>
 			<td>
 					<select name="ancient<?php echo$a?>">
+						<option value=" "> </option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -375,6 +384,7 @@ input{width:100px;}
 			
 			<td>
 				<select name="modern<?php echo$a?>">
+					<option value=" "> </option>
 					<option value="doctor">doctor</option>
 					<option value="engineer">engineer</option>
 					<option value="nurse">nurse</option>
@@ -434,7 +444,10 @@ input{width:100px;}
 					<td>others</td>
 					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="others"></td>
 				</tr>
-				
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
+				</tr>
 				
 					
 								
@@ -477,7 +490,11 @@ input{width:100px;}
 				</tr>
 				<tr>
 					<td>others</td>
-					<td><input type="checkbox" name="disease[]<?php echo$a?>[]" value="others"></td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="others"></td>
+				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
 				</tr>
 				
 				
@@ -555,6 +572,10 @@ input{width:100px;}
 					<td>others</td>
 					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="others"></td>
 				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
+				</tr>
 				
 				
 					
@@ -592,6 +613,10 @@ input{width:100px;}
 				<tr>
 					<td>others</td>
 					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="others"></td>
+				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
 				</tr>
 				
 				
@@ -634,6 +659,10 @@ input{width:100px;}
 					<td>others</td>
 					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="others"></td>
 				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
+				</tr>
 				
 				
 					
@@ -671,6 +700,10 @@ input{width:100px;}
 					<td>others</td>
 					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="others"></td>
 				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
+				</tr>
 				
 				
 					
@@ -692,6 +725,10 @@ input{width:100px;}
 					<td>other</td>
 					<td><input type="checkbox" name="addict<?php echo$a?>[]" value="other"></td>
 				</tr>
+				<tr style="display:none;">
+					<td>xyzzywhatisthiseven2014</td>
+					<td><input type="checkbox" name="addict<?php echo$a?>[]" value="xyzzywhatisthiseven2014" checked></td>
+				</tr>
 				</table>
 			</td>
 			
@@ -704,7 +741,7 @@ input{width:100px;}
 			
 		</tr>
 		<tr class="item1" id="item" >
-			<td><textarea name="comment" rows="10" cols="60"></textarea></td>
+			<td><textarea name="comment<?php echo$a?>" rows="10" cols="60" wrap="physical">Enter kaifiyat</textarea></td>
 		</tr>
 		</table>
 		<hr>
