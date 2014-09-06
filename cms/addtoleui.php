@@ -23,6 +23,7 @@ document.getElementById(divId).style.display = 'none';
 </script>
 
 <title>
+Add Tole
 </title>
 <link rel="stylesheet" type="text/css" href="../css/button.css">
 <style type="text/css">
@@ -130,7 +131,7 @@ input{width:100px;}
 		
 		</table>
 		<br>
-	<input type="submit" value="ADD" class="button" style="margin-left:05px;" >	
+	<input type="submit" value="ADD" class="button" style="margin-left:5px;" >	
 	
 	</form>
 

@@ -24,10 +24,12 @@ document.getElementById(divId).style.display = 'none';
 </script>
 
 <title>
+Add person
 </title>
+<link rel="stylesheet" type="text/css" href="../css/button.css">
 <style type="text/css">
 tr.item td{padding:12px;border:0px;text-align:center;vertical-align:middle;}
-tr.item1 td{padding:12px;border:0px;text-align:center;vertical-align:top;}
+tr.item1 td{padding:5px;border:0px;text-align:center;vertical-align:top;}
 tr.item th{padding:12px;border:0px;text-align:center;vertical-align:middle;}
 img{cursor:pointer;}
 input{width:100px;}
@@ -39,8 +41,15 @@ input{width:100px;}
 			include("../includes/head.php");
 		
 	?>
+	
+	<a name="top">&nbsp;</a>
+	
 	<br>
-	<form method="post" action="ir-slip.php">
+	<p style="right:0;position:fixed;"><a href="#done"><img src="../images/done-small.png"></a></p>
+	<br/><br/>
+	
+	
+	<form method="post" action="addperson.php">
 	<fieldset>
 		<legend><b>Add Person</b></legend>
 		<table>
@@ -79,15 +88,15 @@ input{width:100px;}
 			</tr>
 			<tr>
 				<td>phone</td>
-				<td><input type="text" name="purpose"></td>
+				<td><input type="text" name="phone"></td>
 			</tr>
 			<tr>
 				<td>info collector</td>
-				<td><input type="text" name="modd"></td>
+				<td><input type="text" name="collector"></td>
 			</tr>
 			<tr>
 				<td>info giver</td>
-				<td><input type="text" name="pchief"></td>
+				<td><input type="text" name="giver"></td>
 			</tr>
 			
 		</table>
@@ -95,14 +104,14 @@ input{width:100px;}
 		<br/>
 		
 		<?php 
-			$a=1;$a2=7;$a3=8;
+			$a=1;$total=25;
 		?>
 		
 		
 		
 		<?php
 		$b=1;
-		while($b<=7)
+		while($b<=$total)
 		{
 		?>
 		<table border="1px solid black" style="margin: 0 auto;">
@@ -287,7 +296,7 @@ input{width:100px;}
 					<option value="udhyog">udhyog</option>
 					
 					<option value="byapar">byapar</option>
-					<option value="homewoek">homework</option>
+					<option value="homework">homework</option>
 					
 					
 					<option value="others">others</option>				
@@ -324,9 +333,7 @@ input{width:100px;}
 			<td></td>
 			<td></td>
 			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			
 		</tr>
 		<tr class="item"  style="background-color: #3399FF;" >
 			<td>Reason </td>
@@ -336,12 +343,7 @@ input{width:100px;}
 			<td>Skill </td>
 			<td>Disease </td>
 			<td>Blood group </td>
-			<td>Sports </td>
-			<td>sanchar </td>
-			<td>sadhan </td>
-			<td>upobhogya sadhan </td>
-			<td>amal </td>
-			<td>kaifiyat </td>
+			
 		
 		
 		</tr>
@@ -397,97 +399,317 @@ input{width:100px;}
 				</select>
 			</td>
 			
-			<td>
-				<select name="skill<?php echo$a?>">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="other">otherother</option>
-								
-				</select>
-			</td>
+			
 			<td>
 				<table border=0>
 				<tr>
-					<td>asd</td>
-					<td><input type="checkbox" name="skill[]" value="1111"></td>
+					<td>Dhimeye</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="dhimeye"></td>
 				</tr>
 				<tr>
-					<td>asd</td>
-					<td><input type="checkbox" name="skill[]" value="2"></td>
+					<td>khee pachima</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="khee pachima"></td>
 				</tr>
-					
+				<tr>
+					<td>basuri</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="basuri"></td>
+				</tr>
+				<tr>
+					<td>harmonium</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="harmonium"></td>
+				</tr>
+				<tr>
+					<td>sitar</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="sitar"></td>
+				</tr>
+				<tr>
+					<td>myehaligu</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="myehaligu"></td>
+				</tr>
+				<tr>
+					<td>nritya</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="nritya"></td>
+				</tr>
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="skill<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
 					
 								
 				</table>
 			</td>
+			
+			<td>
+				<table border=0>
+				<tr>
+					<td>blood pressure</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="blood pressure"></td>
+				</tr>
+				<tr>
+					<td>sugar</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="sugar"></td>
+				</tr>
+				<tr>
+					<td>dam</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="dam"></td>
+				</tr>
+				<tr>
+					<td>heart</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="heart"></td>
+				</tr>
+				<tr>
+					<td>hardjorni</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="hardjorni"></td>
+				</tr>
+				<tr>
+					<td>chyacyaigu</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="chyacyaigu"></td>
+				</tr>
+				<tr>
+					<td>bat lwya</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="bat lwya"></td>
+				</tr>
+				<tr>
+					<td>gystrik</td>
+					<td><input type="checkbox" name="disease<?php echo$a?>[]" value="gyastrik"></td>
+				</tr>
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="disease[]<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
+					
+								
+				</table>
+			</td>
+			
 			<td>
 				<select name="blood<?php echo$a?>">
-					<option value="A+">1</option>
-					<option value="A-">2</option>
-					<option value="B+">3</option>
-					<option value="B-">4</option>
-					<option value="AB+">5</option>
-					<option value="AB-">6</option>
-					<option value="O+">7</option>
-					<option value="O-">8</option>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
 					<option value="other">other</option>
 								
 				</select>
 				
 			</td>
+			
+		</tr>
+		</table>
+		<BR>
+		<table border="1px solid black" style="margin:0 auto;">
+		<tr class="item1"  style="background-color: #3399FF;" >
+			<td>Sports </td>
+			<td>sanchar </td>
+			<td>sadhan </td>
+			<td>upobhogya sadhan </td>
+			<td>amal </td>
+			
+		</tr>
+		<tr class="item1" id="item" >
+			
+			
 			<td>
-				<select name="sport<?php echo$a?>">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="other">otherother</option>
+				<table border=0>
+				<tr>
+					<td>football</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="football"></td>
+				</tr>
+				<tr>
+					<td>volleyball</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="volleyball"></td>
+				</tr>
+				<tr>
+					<td>TT</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="TT"></td>
+				</tr>
+				<tr>
+					<td>judo</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="judo"></td>
+				</tr>
+				<tr>
+					<td>karate</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="karate"></td>
+				</tr>
+				<tr>
+					<td>chess</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="chess"></td>
+				</tr>
+				<tr>
+					<td>badminton</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="badminton"></td>
+				</tr>
+				<tr>
+					<td>doud</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="doud"></td>
+				</tr>
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="sport<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
+					
 								
-				</select>
+				</table>
+			</td>
+			
+			<td>
+				<table border=0>
+				<tr>
+					<td>radio</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="radio"></td>
+				</tr>
+				<tr>
+					<td>tv</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="tv"></td>
+				</tr>
+				<tr>
+					<td>pc</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="pc"></td>
+				</tr>
+				<tr>
+					<td>phone</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="phone"></td>
+				</tr>
+				<tr>
+					<td>mobile</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="mobile"></td>
+				</tr>
+				<tr>
+					<td>internet</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="internet"></td>
+				</tr>
+				
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="tele<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
+					
+								
+				</table>
+			</td>
+			
+			<td>
+				<table border=0>
+				<tr>
+					<td>cycle</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="cycle"></td>
+				</tr>
+				<tr>
+					<td>motorcycle</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="motorcycle"></td>
+				</tr>
+				<tr>
+					<td>scotee</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="scotee"></td>
+				</tr>
+				<tr>
+					<td>car</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="car"></td>
+				</tr>
+				<tr>
+					<td>bus</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="bus"></td>
+				</tr>
+				<tr>
+					<td>truck</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="truck"></td>
+				</tr>
+				<tr>
+					<td>tractor</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="tractor"></td>
+				</tr>
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="trans<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
+					
+								
+				</table>
 			</td>
 			<td>
-				<select name="telecom<?php echo$a?>">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="other">otherother</option>
+				<table border=0>
+				<tr>
+					<td>vutu</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="vutu"></td>
+				</tr>
+				<tr>
+					<td>stove</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="stove"></td>
+				</tr>
+				<tr>
+					<td>gas</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="gas"></td>
+				</tr>
+				<tr>
+					<td>ricecooker</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="ricecooker"></td>
+				</tr>
+				<tr>
+					<td>oven</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="oven"></td>
+				</tr>
+				<tr>
+					<td>fridge</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="fridge"></td>
+				</tr>
+				
+				<tr>
+					<td>others</td>
+					<td><input type="checkbox" name="cook<?php echo$a?>[]" value="others"></td>
+				</tr>
+				
+				
+					
 								
-				</select>
+				</table>
 			</td>
+			
+			<td>
+				<table border=0>
+				<tr>
+					<td>dhumrapan</td>
+					<td><input type="checkbox" name="addict<?php echo$a?>[]" value="dhumrapan"></td>
+				</tr>
+				<tr>
+					<td>madirapan</td>
+					<td><input type="checkbox" name="addict<?php echo$a?>[]" value="madirapan"></td>
+				</tr>
+				<tr>
+					<td>other</td>
+					<td><input type="checkbox" name="addict<?php echo$a?>[]" value="other"></td>
+				</tr>
+				</table>
+			</td>
+			
+		</tr>
+		</table>
+		
+		<table border="1px solid black" style="margin:0 auto;">
+		<tr class="item1"  style="background-color: #3399FF;" >
+			<td>Kaifiyat </td>
+			
+		</tr>
+		<tr class="item1" id="item" >
+			<td><textarea name="comment" rows="10" cols="60"></textarea></td>
 		</tr>
 		</table>
 		<hr>
 		<?php 
 		$b=$b+1;$a=$a+1;
-		} ?>
-		<?php
-		$abc=8;$x=1;
-		while($x<=100){
-		?>
-		<tr class="item" id="item<?php echo$a2 ?>" style="display:none;">
-			<td><input style="width:40px;" type="text" name="sn<?php echo$abc?>"></td>
-			<td><input type="text" name="icode<?php echo$abc?>"></td>
-			<td><input type="text" name="iname<?php echo$abc?>"></td>
-			<td><input type="text" name="specs<?php echo$abc?>"></td>
-			<td><input type="text" name="quant<?php echo$abc?>"></td>
-			<td><input type="text" name="quantissued<?php echo$abc?>"></td>
-			<td><input type="text" name="rem<?php echo$abc?>"></td>
-			<td><img src="images/add1.png" id="img<?php echo$a2 ?>" onclick="javascript:ShowHide('item<?php echo$a3?>','img<?php echo$a2 ?>')" style="heght:20px;width:20px;"></td>
-		<?php 
-		$x=$x+1;$a3=$a3+1;$a2=$a2+1;$abc=$abc+1;
 		} ?>
 		
 		
@@ -497,9 +719,17 @@ input{width:100px;}
 		
 		
 		<br>
-	<input type="submit" value="send" style="margin-left:905px;" >	
+		
+	<table style="margin:0 auto;">
+		<tr>
+			<td>
+			<input type="submit"  value="send" class="button" >
+			</td>
+		</tr>
+	</table>
 	
 	</form>
+	<a href="#top" name= "done"><img src="../images/checklist-small.png"></a>
 
 
 </body>
